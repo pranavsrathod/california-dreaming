@@ -36,3 +36,8 @@ Yosemeti :
     - Lower Yosemite Falls Trailhead : https://maps.app.goo.gl/egNDAgpLjvMLgVY56
     - Vernal Fall : https://maps.app.goo.gl/crVpjhTiUY4EF7gN6
     - Mariposa https://maps.app.goo.gl/N14ELmWCT2efvM429
+
+Lake Tahoe : 
+    - South Lake Tahoe : https://maps.app.goo.gl/feMdxooHz5sVwxeAA (Must)
+    - Emerald Bay State Park : https://maps.app.goo.gl/RfZx5pPZPdjdg4NK8
+    - Ed Z'berg Sugar Pine Point State Park : https://maps.app.goo.gl/jxiWseJ9FCYkHTGc7 (Must)

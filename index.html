@@ -97,7 +97,7 @@
     </div>
 
     <!-- Hero Section -->
-    <section class="relative h-screen flex items-center justify-center overflow-hidden">
+    <section class="relative min-h-screen flex items-center justify-center overflow-hidden px-4">
         <svg class="absolute inset-0 w-full h-full opacity-20 pointer-events-none" viewBox="0 0 1280 720">
             <path class="dash-trail" d="M-50,200 Q300,50 640,360 T1330,200" fill="none" stroke="#f97316" stroke-width="2" />
         </svg>
@@ -108,7 +108,7 @@
 
         <div class="text-center z-10 px-4">
             <span class="uppercase tracking-[0.3em] text-orange-600 font-bold text-sm mb-4 block">California Expedition 2026</span>
-            <h1 class="text-6xl md:text-9xl mb-6">The Golden Loop</h1>
+            <h1 class="text-4xl sm:text-6xl md:text-8xl lg:text-9xl mb-6 leading-tight">The Golden Loop</h1>
             <p class="text-xl md:text-2xl text-slate-600 max-w-2xl mx-auto italic">
                 Four days. Three landscapes. One perfectly engineered loop through the best of California.
             </p>
@@ -134,16 +134,11 @@
         <div class="absolute bottom-10 left-1/2 -translate-x-1/2 car-anim">
             <i class="fa-solid fa-car-side text-6xl text-slate-800"></i>
         </div>
-        <div class="mt-16 text-center">
-            <a href="#budget" class="inline-block bg-orange-500 text-white px-8 py-4 rounded-full font-bold hover:bg-orange-600 transition">
-                Compare All Options →
-            </a>
-        </div>
     </section>
 
 
     <!-- Route Strategy Section -->
-    <section id="route-strategy" class="py-24 px-6 max-w-7xl mx-auto">
+    <section id="route-strategy" class="py-16 md:py-24 px-4 md:px-6 max-w-7xl mx-auto">
         <div class="text-center mb-16">
             <span class="uppercase tracking-widest text-orange-500 font-bold text-sm">Route Intelligence</span>
             <h2 class="text-5xl mt-2">The Map Breakdown</h2>
@@ -305,7 +300,7 @@
     </section>
 
     <!-- Itinerary Section -->
-    <section id="itinerary" class="py-24 bg-slate-900 text-white relative">
+    <section id="itinerary" class="py-16 md:py-24 bg-slate-900 text-white relative">
         <div class="max-w-7xl mx-auto px-6">
             <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
                 <div>
@@ -398,7 +393,7 @@
     </section>
 
     <!-- Budget Comparison Section -->
-    <section id="budget" class="max-w-7xl mx-auto py-12">
+    <section id="budget" class="max-w-7xl mx-auto py-16 md:py-24 px-4 md:px-6">
         <div class="text-center mb-16">
             <span class="uppercase tracking-widest text-orange-500 font-bold text-sm">The Ultimate Decision</span>
             <h1 class="text-5xl md:text-6xl mt-2 italic">Choose Your Adventure</h1>
@@ -585,7 +580,7 @@
     </section>
 
     <!-- LA Food Section -->
-    <section id="la-spots" class="py-24 bg-orange-50">
+    <section id="la-spots" class="py-16 md:py-24 px-4 md:px-6 bg-orange-50">
         <div class="max-w-7xl mx-auto px-6">
             <div class="text-center mb-16">
                 <span class="uppercase tracking-widest text-orange-600 font-bold text-sm">LA Reward Sequence</span>
@@ -602,7 +597,7 @@
     </section>
 
     <!-- Memories Carousel -->
-    <section id="memories" class="py-24 bg-white">
+    <section id="memories" class="py-16 md:py-24 px-4 md:px-6 bg-white">
         <div class="max-w-7xl mx-auto px-6">
             <div class="text-center mb-16">
                 <span class="uppercase tracking-widest text-orange-500 font-bold text-sm">Archive</span>
@@ -610,8 +605,8 @@
                 <p class="text-slate-500 mt-4">This is for Pure Emotional Blackmail</p>
             </div>
 
-            <div class="relative overflow-hidden rounded-3xl shadow-2xl border border-slate-200">
-                <div id="carousel" class="flex gap-6 overflow-hidden">
+            <div class="relative rounded-3xl shadow-2xl border border-slate-200 overflow-hidden">
+                <div id="carousel" class="flex gap-6 overflow-x-auto scroll-smooth cursor-grab active:cursor-grabbing select-none">
                     <!-- Images will be injected automatically from /Memories folder -->
                 </div>
             </div>
@@ -620,87 +615,112 @@
 
     <!-- Footer / CTA -->
     <footer class="bg-slate-900 text-white py-24 px-6 text-center">
-        
-        <p class="mt-24 opacity-30 text-sm">© 2026 The Golden State Expedition. No Boring Days Allowed.</p>
+        <p class="mt-24 opacity-30 text-sm">© 2026 Pranav R. No Boring Days Allowed.</p>
     </footer>
 
     <script>
-        // ===== Rotating Memories Carousel =====
+        // ===== Smooth Auto + Drag Carousel =====
         const carousel = document.getElementById('carousel');
-        let memoryImages = [];
-        let scrollAmount = 0;
-        let animationFrame;
 
+        let isDown = false;
+        let startX;
+        let scrollLeft;
+        let animationFrame;
+        let autoSpeed = 0.6; // Slightly faster for smoother feel
+
+        // Remove snap behavior (was causing jitter)
+        carousel.style.scrollSnapType = "none";
+
+        // ===== Load Images =====
+        // Note: Using placeholder image array if memories.json isn't present for demo
         fetch('memories.json')
           .then(res => res.json())
+          .catch(() => [
+              "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=800&q=80",
+              "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=800&q=80",
+              "https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=800&q=80"
+          ])
           .then(images => {
-            memoryImages = images;
-
-            // Duplicate images for seamless infinite loop
-            const allImages = [...memoryImages, ...memoryImages];
+            // Triple the images to ensure a seamless loop buffer
+            const allImages = [...images, ...images, ...images];
 
             allImages.forEach(src => {
               const img = document.createElement('img');
               img.src = src;
-              img.className = "h-[500px] w-[700px] object-cover rounded-2xl flex-shrink-0";
+              img.className = "h-[350px] sm:h-[450px] md:h-[520px] w-[80vw] sm:w-[600px] md:w-[760px] object-cover rounded-3xl flex-shrink-0 pointer-events-none";
               carousel.appendChild(img);
             });
 
-            startRotation();
+            // Start in the middle of the set for seamless back-scrolling
+            carousel.scrollLeft = carousel.scrollWidth / 3;
+            startAutoScroll();
           });
 
-        function startRotation() {
-          const speed = 0.5; // smaller = slower
+        // ===== Auto Scroll Logic =====
+        function startAutoScroll() {
+          if (animationFrame) cancelAnimationFrame(animationFrame);
 
-          function animate() {
-            scrollAmount += speed;
-            if (scrollAmount >= carousel.scrollWidth / 2) {
-              scrollAmount = 0;
+          function step() {
+            if (!isDown) {
+              carousel.scrollLeft += autoSpeed;
+
+              const half = carousel.scrollWidth / 2;
+              const third = carousel.scrollWidth / 3;
+
+              // Forward Loop Reset
+              if (carousel.scrollLeft >= (carousel.scrollWidth - carousel.clientWidth)) {
+                carousel.scrollLeft = third;
+              }
+              // Backward Loop Reset (for manual drag)
+              if (carousel.scrollLeft <= 0) {
+                carousel.scrollLeft = third;
+              }
             }
-            carousel.scrollLeft = scrollAmount;
-            animationFrame = requestAnimationFrame(animate);
+            animationFrame = requestAnimationFrame(step);
           }
-
-          animate();
+          animationFrame = requestAnimationFrame(step);
         }
 
-        // Pause on hover
-        carousel.addEventListener('mouseenter', () => cancelAnimationFrame(animationFrame));
-        carousel.addEventListener('mouseleave', () => startRotation());
+        // ===== Drag Support (Fixed Unified Pointers) =====
+        carousel.addEventListener('pointerdown', (e) => {
+          isDown = true;
+          carousel.classList.add('grabbing');
+          carousel.setPointerCapture(e.pointerId);
+          startX = e.clientX;
+          scrollLeft = carousel.scrollLeft;
+        });
 
-        // Paper-plane cursor (desktop only)
+        carousel.addEventListener('pointermove', (e) => {
+          if (!isDown) return;
+          const x = e.clientX;
+          const walk = (x - startX) * 1.5; // Multiplier for drag sensitivity
+          carousel.scrollLeft = scrollLeft - walk;
+        });
+
+        carousel.addEventListener('pointerup', (e) => {
+          isDown = false;
+          carousel.classList.remove('grabbing');
+          carousel.releasePointerCapture(e.pointerId);
+          // Small delay before restarting auto-scroll prevents jump
+          setTimeout(startAutoScroll, 50);
+        });
+
+        carousel.addEventListener('pointercancel', () => {
+          isDown = false;
+          startAutoScroll();
+        });
+
+        // ===== Custom Cursor Logic =====
         const cursorPlane = document.getElementById('cursorPlane');
         const isTouch = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
-        const prefersReducedMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-        if (!isTouch && !prefersReducedMotion) {
+        if (!isTouch) {
             document.body.classList.add('custom-cursor');
-
-            let rafId = null;
-            let latestX = 0;
-            let latestY = 0;
-
-            const update = () => {
-                cursorPlane.style.transform = `translate(${latestX}px, ${latestY}px) translate(-50%, -50%)`;
-                rafId = null;
-            };
-
             window.addEventListener('mousemove', (e) => {
-                latestX = e.clientX;
-                latestY = e.clientY;
-
-                if (cursorPlane.style.opacity !== '1') cursorPlane.style.opacity = '1';
-
-                if (!rafId) rafId = requestAnimationFrame(update);
-            }, { passive: true });
-
-            window.addEventListener('mouseleave', () => {
-                cursorPlane.style.opacity = '0';
-            });
-
-            window.addEventListener('mouseenter', () => {
                 cursorPlane.style.opacity = '1';
+                cursorPlane.style.transform = `translate(${e.clientX}px, ${e.clientY}px) translate(-50%, -50%) rotate(${isDown ? '45deg' : '0deg'})`;
             });
+            window.addEventListener('mouseleave', () => cursorPlane.style.opacity = '0');
         }
 
         // ===== Trip Experiences → City Sections =====
@@ -714,18 +734,18 @@
               if (!el) return;
 
               const card = document.createElement('div');
-              card.className = `bg-slate-700/60 border border-slate-600 rounded-2xl p-4 hover:border-${accentColor}-400 transition`;
+              card.className = `bg-slate-700/60 border border-slate-600 rounded-2xl p-4`;
 
               card.innerHTML = `
                 <div class="flex justify-between items-start mb-2">
                   <p class="font-semibold">${exp.name}</p>
                   ${exp.mustDo ? '<span class="text-xs bg-orange-500 px-2 py-1 rounded-full font-bold">MUST</span>' : ''}
                 </div>
-                <p class="text-xs text-slate-400 mb-2">${exp.type} • ${exp.intensity}</p>
+                <p class="text-xs text-slate-400 mb-2">${exp.type || ''} ${exp.intensity ? '• ' + exp.intensity : ''}</p>
                 ${exp.notes ? `<p class="text-sm text-slate-300 mb-3">${exp.notes}</p>` : ''}
                 ${exp.map ? `
                   <div class="flex justify-end mt-3">
-                    <a href="${exp.map}" target="_blank" 
+                    <a href="${exp.map}" target="_blank"
                        class="inline-flex items-center gap-2 text-xs font-semibold px-3 py-2 rounded-full bg-${accentColor}-500/20 text-${accentColor}-400 border border-${accentColor}-500/30 hover:bg-${accentColor}-500 hover:text-white transition duration-300">
                        <i class="fa-solid fa-location-dot"></i>
                        Open in Maps
@@ -756,22 +776,16 @@
                 renderCityCard('tahoeSuggestions', exp, 'blue');
               }
             });
-          })
-          .catch(err => console.error('Failed to load tripData.json', err));
 
-        // ===== LA Restaurant Cards =====
-        fetch('tripData.json')
-          .then(res => res.json())
-          .then(data => {
+            // ===== LA Restaurant Cards =====
             const container = document.getElementById('laSpotsContainer');
             if (!data.laSpots || !container) return;
 
-            // Sort by priority (lower number = higher priority)
             const sortedSpots = [...data.laSpots].sort((a, b) => (a.priority ?? 99) - (b.priority ?? 99));
 
             sortedSpots.forEach(place => {
               const card = document.createElement('div');
-              card.className = "bg-white rounded-3xl p-8 shadow-xl border border-orange-100 hover:shadow-2xl transition duration-300 flex flex-col justify-between";
+              card.className = "bg-white rounded-3xl p-8 shadow-xl border border-orange-100 flex flex-col justify-between";
 
               card.innerHTML = `
                 <div>
@@ -787,18 +801,20 @@
                   <p class="text-slate-600 mb-6">${place.notes ?? ''}</p>
                 </div>
 
+                ${place.map ? `
                 <a href="${place.map}" target="_blank" rel="noopener noreferrer"
                    class="mt-auto inline-block text-center bg-orange-500 text-white px-6 py-3 rounded-full font-bold hover:bg-orange-600 transition">
                    Open in Maps
                 </a>
+                ` : ''}
               `;
 
               container.appendChild(card);
             });
+
           })
           .catch(err => console.error('Failed to load tripData.json', err));
 
-        console.log("Trip HQ Ready. Let's go!");
     </script>
 </body>
 </html>
