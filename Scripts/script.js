@@ -91,7 +91,7 @@ fetch('tripData.json')
     .catch(err => console.error('Failed to load tripData.json', err));
 
 // ===== Route Strategy Rendering =====
-fetch('../routeData.json')
+fetch('routeData.json')
   .then(res => res.json())
   .then(data => {
     if (!data.routes) return;
@@ -171,7 +171,7 @@ fetch('../routeData.json')
 
 
 // ===== Dynamic Budget Rendering =====
-fetch('../routeData.json')
+fetch('routeData.json')
   .then(res => res.json())
   .then(data => {
     if (!data.routes) return;
