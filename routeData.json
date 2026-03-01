@@ -1,0 +1,79 @@
+{
+    "routes": [
+      {
+        "id": "tahoe-route",
+        "name": "Tahoe Route",
+        "shortLabel": "The Full Send",
+        "flightLogic": "Round Trip LAX",
+        "mapEmbed": "https://www.google.com/maps/embed?pb=!1m64!1m12!1m3!1d3288315.3367525763!2d-122.84731977308502!3d36.40325647663798!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m49!3e0!4m5!1s0x80c2b0d213b24fb5%3A0x77a87b57698badf1!2sLos%20Angeles%20International%20Airport%2C%201%20World%20Wy%2C%20Los%20Angeles%2C%20CA%2090045!3m2!1d33.942153!2d-118.4036052!4m5!1s0x80c2c7f04d1452b3%3A0x988cd143a2938245!2s1326%20W%2029th%20St%2C%20Los%20Angeles%2C%20CA%2090007-3193%2C%20USA!3m2!1d34.0281709!2d-118.2898299!4m5!1s0x808de8a7780e4d77%3A0x37e8d859caefac61!2sBig%20Sur%2C%20California!3m2!1d36.2704233!2d-121.80805559999999!4m5!1s0x808de615b717ec53%3A0xd2c22ba6ca51541c!2sCarmel-By-The-Sea%2C%20California%2093921!3m2!1d36.555238599999996!2d-121.92328789999999!4m5!1s0x80998589eea54fe1%3A0xdd1b2f46fb23918e!2sSouth%20Lake%20Tahoe%2C%20California%2096150!3m2!1d38.939926!2d-119.9771868!4m5!1s0x8096b0aac3ff60c5%3A0xb0ab002eb339644e!2sMariposa%2C%20California%2095338!3m2!1d37.4930789!2d-119.9727277!4m5!1s0x8096f3a12c60b25d%3A0xb5a3a3f4af3834e1!2sMist%20Trail%2C%20California!3m2!1d37.726563!2d-119.5397514!4m5!1s0x80c2c7f04d1452b3%3A0x988cd143a2938245!2s1326%20W%2029th%20St%2C%20Los%20Angeles%2C%20CA%2090007-3193%2C%20USA!3m2!1d34.0281709!2d-118.2898299!5e0!3m2!1sen!2sus!4v1772007661517!5m2!1sen!2sus",
+        "summary": {
+          "distanceMiles": 1175,
+          "driveHours": "22+",
+          "complexity": "High"
+        },
+        "notes": "LAX → Tahoe → Yosemite → LAX. Big ambition, heavy driving, significant backtracking.",
+        "prosCons": {
+          "proLabel": "Adventure Scale",
+          "proText": "Covers Tahoe + Yosemite + Coast in one trip.",
+          "conLabel": "Biggest Con",
+          "conText": "Extreme backtracking. High fatigue risk."
+        },
+        "budget": {
+          "flight": 280,
+          "carAndGas": 350,
+          "miscFood": 400,
+          "estimatedTotal": 1105
+        }
+      },
+      {
+        "id": "optimized-loop",
+        "name": "Optimized Loop",
+        "shortLabel": "Smarter Flow",
+        "flightLogic": "Multi-City (OAK → LAX)",
+        "mapEmbed": "https://www.google.com/maps/embed?pb=!1m46!1m12!1m3!1d1654705.5437239376!2d-121.57380369965178!3d35.90176846869079!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m31!3e0!4m5!1s0x808f845402c0a641%3A0xb0630c0f03017460!2sOakland%20San%20Francisco%20Bay%20Airport%2C%201%20Airport%20Dr%2C%20Oakland%2C%20CA%2094621!3m2!1d37.719036599999995!2d-122.2195893!4m5!1s0x8096f3a12c60b25d%3A0xb5a3a3f4af3834e1!2sMist%20Trail%2C%20California!3m2!1d37.726563!2d-119.5397514!4m5!1s0x808de615b717ec53%3A0xd2c22ba6ca51541c!2sCarmel-By-The-Sea%2C%20California%2093921!3m2!1d36.555238599999996!2d-121.92328789999999!4m5!1s0x808de8a7780e4d77%3A0x37e8d859caefac61!2sBig%20Sur%2C%20California!3m2!1d36.2704233!2d-121.80805559999999!4m5!1s0x80c2c7f04d1452b3%3A0x988cd143a2938245!2s1326%20W%2029th%20St%2C%20Los%20Angeles%2C%20CA%2090007-3193%2C%20USA!3m2!1d34.0281709!2d-118.2898299!5e0!3m2!1sen!2sus!4v1772010231637!5m2!1sen!2sus",
+        "summary": {
+          "distanceMiles": 730,
+          "driveHours": "~15",
+          "complexity": "Low"
+        },
+        "notes": "Fly into Oakland (OAK). Head straight to Yosemite while energy is high. Drift down the coast through Carmel and Big Sur. Finish in LA and actually enjoy the city for a few days instead of racing back. Same drama. Smarter flow.",
+        "prosCons": {
+          "proLabel": "Biggest Pro",
+          "proText": "Maximum efficiency. Save ~6 hours of driving.",
+          "conLabel": "Tradeoff",
+          "conText": "Requires multi-city flight booking."
+        },
+        "budget": {
+          "flight": 340,
+          "carAndGas": 220,
+          "miscFood": 350,
+          "estimatedTotal": 1035
+        }
+      },
+      {
+        "id": "la-loop-out",
+        "name": "LA Loop-Out",
+        "shortLabel": "Middle Ground",
+        "flightLogic": "Round Trip LAX",
+        "mapEmbed": "https://www.google.com/maps/embed?pb=!1m52!1m12!1m3!1d1656234.9078388885!2d-121.41264775753697!3d35.82855313782976!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m37!3e0!4m5!1s0x80c2b0d213b24fb5%3A0x77a87b57698badf1!2sLos%20Angeles%20International%20Airport%2C%201%20World%20Wy%2C%20Los%20Angeles%2C%20CA%2090045!3m2!1d33.942153!2d-118.4036052!4m5!1s0x80c2c7f04d1452b3%3A0x988cd143a2938245!2s1326%20W%2029th%20St%2C%20Los%20Angeles%2C%20CA%2090007-3193%2C%20USA!3m2!1d34.0281709!2d-118.2898299!4m5!1s0x8096f3a12c60b25d%3A0xb5a3a3f4af3834e1!2sMist%20Trail%2C%20California!3m2!1d37.726563!2d-119.5397514!4m5!1s0x808de615b717ec53%3A0xd2c22ba6ca51541c!2sCarmel-By-The-Sea%2C%20California%2093921!3m2!1d36.555238599999996!2d-121.92328789999999!4m5!1s0x808de8a7780e4d77%3A0x37e8d859caefac61!2sBig%20Sur%2C%20California!3m2!1d36.2704233!2d-121.80805559999999!4m5!1s0x80c2c7f04d1452b3%3A0x988cd143a2938245!2s1326%20W%2029th%20St%2C%20Los%20Angeles%2C%20CA%2090007-3193%2C%20USA!3m2!1d34.0281709!2d-118.2898299!5e0!3m2!1sen!2sus!4v1772019485719!5m2!1sen!2sus",
+        "summary": {
+          "distanceMiles": 860,
+          "driveHours": "~17",
+          "complexity": "Moderate"
+        },
+        "notes": "Fly into LAX, reset at USC basecamp, head to Yosemite first, drift to Carmel + Big Sur, return to LA. Balanced pacing.",
+        "prosCons": {
+          "proLabel": "Balanced Strategy",
+          "proText": "Simple flights + reduced driving vs Tahoe plan.",
+          "conLabel": "Tradeoff",
+          "conText": "Still requires significant inland-to-coast driving."
+        },
+        "budget": {
+          "flight": 280,
+          "carAndGas": 310,
+          "miscFood": 380,
+          "estimatedTotal": 1045
+        }
+      }
+    ]
+  }

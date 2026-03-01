@@ -1,0 +1,88 @@
+:root {
+    --primary: #f97316;
+    --forest: #1e293b;
+    --cream: #fffbeb;
+}
+
+body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    background-color: var(--cream);
+    color: var(--forest);
+    scroll-behavior: smooth;
+}
+
+h1, h2, h3 {
+    font-family: 'Playfair Display', serif;
+}
+
+/* Animated Dash Trail */
+.dash-trail {
+    stroke-dasharray: 10;
+    animation: dash 20s linear infinite;
+}
+
+@keyframes dash {
+    to { stroke-dashoffset: -1000; }
+}
+
+/* Animated Car */
+.car-anim {
+    animation: drive 10s ease-in-out infinite alternate;
+}
+
+@keyframes drive {
+    from { transform: translateX(-20px) rotate(0deg); }
+    to { transform: translateX(20px) rotate(2deg); }
+}
+
+/* Floating Paper Plane */
+.plane-float {
+    animation: float 4s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0) rotate(-10deg); }
+    50% { transform: translateY(-20px) rotate(5deg); }
+}
+
+.itinerary-card:hover .card-img {
+    transform: scale(1.05);
+}
+
+.card-img {
+    transition: transform 0.5s ease;
+}
+
+/* Glassmorphism */
+.glass {
+    background: rgba(255, 251, 235, 0.8);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(249, 115, 22, 0.1);
+}
+
+/* Paper-plane cursor */
+body.custom-cursor {
+    cursor: none;
+}
+
+#cursorPlane {
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 9999;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 120ms ease;
+    will-change: transform;
+}
+
+#cursorPlane i {
+    font-size: 22px;
+    color: var(--primary);
+    filter: drop-shadow(0 8px 10px rgba(30, 41, 59, 0.25));
+}
+
+@media (prefers-reduced-motion: reduce) {
+    body.custom-cursor { cursor: auto; }
+    #cursorPlane { display: none; }
+}

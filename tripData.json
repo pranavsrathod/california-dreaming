@@ -43,6 +43,14 @@
       "notes": "Have never been — high priority visit",
       "category": "Thai",
       "priority": 1
+    },
+    {
+      "name": "Porto's Bakery and Cafe",
+      "map": "https://maps.app.goo.gl/96RPi3WwUYMpyZkL6",
+      "mustTry": "Refugiado (Guava and Cheese Strudel), Potato Ball",
+      "notes": "Great pastries + drinks.",
+      "category": "Cuban-American",
+      "priority": 2
     }
   ],
   "tripExperiences": [
