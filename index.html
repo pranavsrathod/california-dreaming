@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Golden State Expedition | Trip HQ</title>
+    <title>The Golden Loop | California 2026</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,39 +12,53 @@
     <link rel="stylesheet" href="Styles/styles.css">
 </head>
 <body class="overflow-x-hidden">
+
     <!-- Custom Cursor Plane -->
     <div id="cursorPlane" aria-hidden="true">
         <i class="fa-solid fa-paper-plane"></i>
     </div>
 
-    <!-- Hero Section -->
+    <!-- ═══════════════════════════════════════════════════════
+         HERO
+    ═══════════════════════════════════════════════════════ -->
     <section class="relative min-h-screen flex items-center justify-center overflow-hidden px-4">
+
+        <!-- Animated trail -->
         <svg class="absolute inset-0 w-full h-full opacity-20 pointer-events-none" viewBox="0 0 1280 720">
             <path class="dash-trail" d="M-50,200 Q300,50 640,360 T1330,200" fill="none" stroke="#f97316" stroke-width="2" />
         </svg>
-        
-        <div class="absolute top-20 right-20 plane-float">
+
+        <!-- Floating plane decoration -->
+        <div class="absolute top-20 right-20 plane-float hidden md:block">
             <i class="fa-solid fa-paper-plane text-orange-500 text-4xl"></i>
         </div>
 
-        <div class="text-center z-10 px-4">
-            <span class="uppercase tracking-[0.3em] text-orange-600 font-bold text-sm mb-4 block">California Expedition 2026</span>
-            <h1 class="text-4xl sm:text-6xl md:text-8xl lg:text-9xl mb-6 leading-tight">The Golden Loop</h1>
-            <p class="text-xl md:text-2xl text-slate-600 max-w-2xl mx-auto italic">
-                Four days. Three landscapes. One perfectly engineered loop through the best of California.
+        <div class="text-center z-10 px-4 max-w-4xl mx-auto">
+            <span class="uppercase tracking-[0.3em] text-orange-600 font-bold text-sm mb-4 block">
+                California · March 2026
+            </span>
+
+            <h1 class="text-5xl sm:text-7xl md:text-9xl mb-4 leading-tight">
+                The Golden Loop
+            </h1>
+
+            <p class="text-xl md:text-2xl text-slate-600 max-w-2xl mx-auto italic mb-3">
+                Five days. Four people. 1,648 miles of California.
             </p>
-            <div class="mt-12 flex flex-wrap gap-4 justify-center">
-                <a href="#route-strategy" class="bg-white text-orange-500 border-2 border-orange-500 px-6 py-3 rounded-full font-bold hover:bg-orange-50 transition">
-                    View Route Strategy
+
+            <p class="text-sm text-slate-400 tracking-widest uppercase mb-10">
+                Pranav &nbsp;·&nbsp; Kartik &nbsp;·&nbsp; Angel &nbsp;·&nbsp; Estephany
+            </p>
+
+            <div class="flex flex-wrap gap-4 justify-center">
+                <a href="#the-route" class="bg-white text-orange-500 border-2 border-orange-500 px-6 py-3 rounded-full font-bold hover:bg-orange-50 transition">
+                    The Route
                 </a>
-                <a href="#itinerary" class="bg-orange-500 text-white px-6 py-3 rounded-full font-bold shadow-lg hover:bg-orange-600 transition">
-                    City Plan
+                <a href="#journey" class="bg-orange-500 text-white px-6 py-3 rounded-full font-bold shadow-lg hover:bg-orange-600 transition">
+                    Stop by Stop
                 </a>
-                <a href="#budget" class="bg-slate-900 text-white px-6 py-3 rounded-full font-bold hover:bg-slate-800 transition">
-                    Budget Comparison
-                </a>
-                <a href="#la-spots" class="bg-orange-100 text-orange-700 px-6 py-3 rounded-full font-bold hover:bg-orange-200 transition">
-                    LA Food
+                <a href="#food" class="bg-[#4d7358] text-white px-6 py-3 rounded-full font-bold hover:bg-[#3d5c47] transition">
+                    Food
                 </a>
                 <a href="#memories" class="bg-slate-200 text-slate-700 px-6 py-3 rounded-full font-bold hover:bg-slate-300 transition">
                     Memories
@@ -52,209 +66,222 @@
             </div>
         </div>
 
+        <!-- Animated car -->
         <div class="absolute bottom-10 left-1/2 -translate-x-1/2 car-anim">
-            <i class="fa-solid fa-car-side text-6xl text-slate-800"></i>
+            <i class="fa-solid fa-car-side text-6xl text-[#1a2f1e]"></i>
         </div>
     </section>
 
 
-    <!-- Route Strategy Section -->
-    <section id="route-strategy" class="py-16 md:py-24 px-4 md:px-6 max-w-7xl mx-auto">
+    <!-- ═══════════════════════════════════════════════════════
+         THE ROUTE
+    ═══════════════════════════════════════════════════════ -->
+    <section id="the-route" class="py-16 md:py-24 px-4 md:px-6 max-w-7xl mx-auto">
         <div class="text-center mb-16">
-            <span class="uppercase tracking-widest text-orange-500 font-bold text-sm">Route Intelligence</span>
-            <h2 class="text-5xl mt-2">The Map Breakdown</h2>
-            <p class="text-slate-500 mt-4 max-w-2xl mx-auto">Before we commit, we analyze. Here’s the full visual of Kartik’s proposed route, the caveats, and the optimized alternative.</p>
+            <span class="uppercase tracking-widest text-orange-500 font-bold text-sm">What Actually Happened</span>
+            <h2 class="text-5xl mt-2">The Route</h2>
+            <p class="text-slate-500 mt-4 max-w-2xl mx-auto">Skipped Tahoe. Found St Helena. No regrets.</p>
         </div>
 
-        <!-- Dynamic Routes Rendered From JSON -->
-        <div id="routesContainer" class="space-y-24">
-            <!-- Route cards will be injected here from routeData.json -->
-        </div>
+        <div id="routesContainer"></div>
     </section>
 
-    <!-- The Pivot Pitch -->
-    <section class="py-24 px-6 max-w-7xl mx-auto">
-        <div class="grid md:grid-cols-2 gap-12 items-center">
-            <div class="order-2 md:order-1">
-                <img src="https://images.unsplash.com/photo-1518391846015-55a9cc003b25?auto=format&fit=crop&q=80&w=1200" alt="San Jose SJC" class="rounded-3xl shadow-2xl">
-            </div>
-            <div class="order-1 md:order-2">
-                <h2 class="text-5xl mb-6">The "Bay Area" Advantage</h2>
-                <p class="text-lg text-slate-600 mb-8 leading-relaxed">
-                    Instead of burning half a day in LA traffic, fly into the Bay Area and start strong. Coast first. Mountains next. Finish in LA with zero backtracking. This isn’t just a trip—it’s a strategically optimized loop.
-                </p>
-                <div class="grid grid-cols-2 gap-6">
-                    <div class="bg-white p-6 rounded-2xl shadow-sm border-l-4 border-orange-500">
-                        <span class="block text-3xl font-extrabold text-orange-500">4.5h</span>
-                        <span class="text-sm uppercase font-bold text-slate-500">Driving Saved</span>
-                    </div>
-                    <div class="bg-white p-6 rounded-2xl shadow-sm border-l-4 border-blue-500">
-                        <span class="block text-3xl font-extrabold text-blue-500">100%</span>
-                        <span class="text-sm uppercase font-bold text-slate-500">Ocean Views</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="mt-16 text-center">
-            <a href="#itinerary" class="inline-block bg-slate-900 text-white px-8 py-4 rounded-full font-bold hover:bg-slate-800 transition">
-                Revisit City Plan →
-            </a>
-        </div>
-    </section>
-    <!-- Itinerary Section -->
-    <section id="itinerary" class="py-16 md:py-24 bg-slate-900 text-white relative">
-        <div class="max-w-7xl mx-auto px-6">
+
+    <!-- ═══════════════════════════════════════════════════════
+         STOP BY STOP
+    ═══════════════════════════════════════════════════════ -->
+    <section id="journey" class="py-16 md:py-24 bg-[#1a2f1e] text-white relative">
+        <div class="max-w-7xl mx-auto px-4 md:px-6">
+
             <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
                 <div>
-                    <span class="text-orange-400 uppercase tracking-widest font-bold">City Strategy</span>
-                    <h2 class="text-5xl md:text-7xl mt-2">City by City</h2>
+                    <span class="text-orange-400 uppercase tracking-widest font-bold text-sm">The Journey</span>
+                    <h2 class="text-5xl md:text-7xl mt-2">Stop by Stop</h2>
                 </div>
-                <p class="text-slate-400 max-w-sm">Instead of locking into fixed days, we break this down by city. Flexible pacing. 2 days here. 2 days there. No rushed transitions.</p>
+                <p class="text-slate-400 max-w-sm">Four stops. Each one completely different. Here's how it went.</p>
             </div>
 
-            <!-- Day Cards -->
             <div class="grid gap-8">
-                <!-- Day 1 -->
-                <div class="itinerary-card group bg-slate-800 rounded-[2rem] overflow-hidden grid md:grid-cols-3">
+
+                <!-- STOP 1 — BIG SUR -->
+                <div class="itinerary-card group bg-[#243d2a] rounded-[2rem] overflow-hidden grid md:grid-cols-3">
                     <div class="h-64 md:h-full overflow-hidden">
-                        <img src="https://images.squarespace-cdn.com/content/v1/5558ab9fe4b02d567e71d61f/1465957600878-83FCZ6CBLCCWDMWA805I/DSC_4480.jpg" class="card-img w-full h-full object-cover" alt="Big Sur">
+                        <img src="https://images.squarespace-cdn.com/content/v1/5558ab9fe4b02d567e71d61f/1465957600878-83FCZ6CBLCCWDMWA805I/DSC_4480.jpg"
+                             class="card-img w-full h-full object-cover" alt="Big Sur">
                     </div>
-                    <div class="p-10 md:col-span-2 flex flex-col justify-center">
+                    <div class="p-8 md:p-10 md:col-span-2 flex flex-col justify-center">
                         <div class="flex justify-between items-start mb-4">
-                            <h3 class="text-3xl">Big Sur & Carmel Coast</h3>
-                            <span class="bg-orange-500 px-4 py-1 rounded-full text-xs font-bold">COAST REGION</span>
+                            <h3 class="text-3xl">Big Sur</h3>
+                            <span class="bg-orange-500 px-4 py-1 rounded-full text-xs font-bold">COAST</span>
                         </div>
-                        <p class="text-slate-400 mb-6">Arrive SJC / LAX. We hit the Highway 1. Bixby Bridge photos, McWay Falls, and our first campsite at Carmel/Monterey.</p>
-                        <div class="flex gap-4">
-                            <span class="text-sm border border-slate-600 px-3 py-1 rounded-md">6h Drive</span>
-                            <span class="text-sm border border-slate-600 px-3 py-1 rounded-md">Sunset Viewpoints</span>
+                        <p class="text-slate-300 mb-6 leading-relaxed">
+                            Highway 1 north from the bottom. Sand Dollar Beach, McWay Falls, Bixby Bridge at golden hour, Point Lobos.
+                            Ended the day at Garrapata State Beach — a wedding photoshoot happening in the field, a dog climbing rocks,
+                            and a sunset that made everyone put their phones away.
+                        </p>
+                        <div class="flex gap-3 flex-wrap mb-2">
+                            <span class="text-sm border border-[#3a5e42] text-slate-300 px-3 py-1 rounded-md">Highway 1</span>
+                            <span class="text-sm border border-[#3a5e42] text-slate-300 px-3 py-1 rounded-md">Sand Dollar Beach</span>
+                            <span class="text-sm border border-[#3a5e42] text-slate-300 px-3 py-1 rounded-md">Garrapata Sunset</span>
                         </div>
-                        <div id="day1Suggestions" class="mt-6 space-y-2 text-sm text-orange-300"></div>
+                        <div id="bigSurSuggestions" class="mt-4 space-y-2 text-sm text-orange-300"></div>
                     </div>
                 </div>
 
-                <!-- Day 2 -->
-                <div class="itinerary-card group bg-slate-800 rounded-[2rem] overflow-hidden grid md:grid-cols-3">
+                <!-- STOP 2 — CARMEL → YOSEMITE SCENIC DAY -->
+                <div class="itinerary-card group bg-[#243d2a] rounded-[2rem] overflow-hidden grid md:grid-cols-3">
                     <div class="h-64 md:h-full overflow-hidden md:order-last">
-                        <img src="https://www.outsideonline.com/wp-content/uploads/2021/02/17/sunrise-yosemite-national-park_h.jpg" class="card-img w-full h-full object-cover" alt="Yosemite">
+                        <img src="https://www.outsideonline.com/wp-content/uploads/2021/02/17/sunrise-yosemite-national-park_h.jpg"
+                             class="card-img w-full h-full object-cover" alt="Yosemite">
                     </div>
-                    <div class="p-10 md:col-span-2 flex flex-col justify-center">
+                    <div class="p-8 md:p-10 md:col-span-2 flex flex-col justify-center">
                         <div class="flex justify-between items-start mb-4">
-                            <h3 class="text-3xl">Yosemite Valley</h3>
-                            <span class="bg-green-600 px-4 py-1 rounded-full text-xs font-bold">SIERRA REGION</span>
+                            <h3 class="text-3xl">Carmel → Yosemite</h3>
+                            <span class="bg-[#4d7358] px-4 py-1 rounded-full text-xs font-bold">SIERRA</span>
                         </div>
-                        <p class="text-slate-400 mb-6">The Mist Trail. 7 miles of vertical climb past two massive waterfalls. We’ll get wet, we’ll get tired, and the views at the top of Nevada Fall will be one of those core memory kind of days.</p>
-                        <div class="flex gap-4">
-                            <span class="text-sm border border-slate-600 px-3 py-1 rounded-md">2,000ft Elevation</span>
-                            <span class="text-sm border border-slate-600 px-3 py-1 rounded-md">Camp Mariposa</span>
+                        <p class="text-slate-300 mb-6 leading-relaxed">
+                            Early Carmel stop for coffee (not worth it). Casa De Fruta on the way in — fresh fruit, dried goods,
+                            a carousel, and a train ride. Into Yosemite for Tunnel View, Bridalveil Fall, El Capitan Meadow,
+                            and a drive along the Merced River. The sunset drive out through Tunnel View was the moment.
+                        </p>
+                        <div class="flex gap-3 flex-wrap mb-2">
+                            <span class="text-sm border border-[#3a5e42] text-slate-300 px-3 py-1 rounded-md">Casa De Fruta</span>
+                            <span class="text-sm border border-[#3a5e42] text-slate-300 px-3 py-1 rounded-md">Tunnel View</span>
+                            <span class="text-sm border border-[#3a5e42] text-slate-300 px-3 py-1 rounded-md">El Capitan</span>
                         </div>
-                        <div id="day2Suggestions" class="mt-6 space-y-2 text-sm text-green-300"></div>
+                        <div id="yosemiteDay1Suggestions" class="mt-4 space-y-2 text-sm text-[#7fbf94]"></div>
                     </div>
                 </div>
 
-                <!-- Day 3 & 4 -->
-                <!-- Lake Tahoe -->
-<div class="itinerary-card group bg-slate-800 rounded-[2rem] overflow-hidden grid md:grid-cols-3">
-    <div class="h-64 md:h-full overflow-hidden">
-        <img src="https://letravelstyle.com/wp-content/uploads/2024/03/DJI_0177-1024x768.jpg"
-             class="card-img w-full h-full object-cover"
-             alt="Lake Tahoe">
-    </div>
+                <!-- STOP 3 — YOSEMITE HIKE DAY -->
+                <div class="itinerary-card group bg-[#243d2a] rounded-[2rem] overflow-hidden grid md:grid-cols-3">
+                    <div class="h-64 md:h-full overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1562016600-ece13e8ba570?auto=format&fit=crop&q=80&w=1200"
+                             class="card-img w-full h-full object-cover" alt="Mist Trail Yosemite">
+                    </div>
+                    <div class="p-8 md:p-10 md:col-span-2 flex flex-col justify-center">
+                        <div class="flex justify-between items-start mb-4">
+                            <h3 class="text-3xl">Mist Trail</h3>
+                            <span class="bg-[#4d7358] px-4 py-1 rounded-full text-xs font-bold">SIERRA</span>
+                        </div>
+                        <p class="text-slate-300 mb-6 leading-relaxed">
+                            Mist Trail up to Vernal Falls. Made it to the top — then found out the loop was closed.
+                            Backtracked the same steep, wet path back down. Calzone Pockets for dinner.
+                            Absolutely earned it.
+                        </p>
+                        <div class="flex gap-3 flex-wrap mb-2">
+                            <span class="text-sm border border-[#3a5e42] text-slate-300 px-3 py-1 rounded-md">Mist Trail</span>
+                            <span class="text-sm border border-[#3a5e42] text-slate-300 px-3 py-1 rounded-md">Vernal Falls</span>
+                            <span class="text-sm border border-[#3a5e42] text-slate-300 px-3 py-1 rounded-md">Loop Closed ↩</span>
+                        </div>
+                        <div id="yosemiteHikeSuggestions" class="mt-4 space-y-2 text-sm text-[#7fbf94]"></div>
+                    </div>
+                </div>
 
-    <div class="p-10 md:col-span-2 flex flex-col justify-center">
-        <div class="flex justify-between items-start mb-4">
-            <h3 class="text-3xl">Lake Tahoe</h3>
-            <span class="bg-blue-600 px-4 py-1 rounded-full text-xs font-bold">
-                ALPINE REGION
-            </span>
-        </div>
+                <!-- STOP 4 — ST HELENA, NAPA VALLEY -->
+                <div class="itinerary-card group bg-[#243d2a] rounded-[2rem] overflow-hidden grid md:grid-cols-3">
+                    <div class="h-64 md:h-full overflow-hidden md:order-last">
+                        <img src="https://images.unsplash.com/photo-1474722883778-792e7990302f?auto=format&fit=crop&q=80&w=1200"
+                             class="card-img w-full h-full object-cover" alt="St Helena Napa Valley">
+                    </div>
+                    <div class="p-8 md:p-10 md:col-span-2 flex flex-col justify-center">
+                        <div class="flex justify-between items-start mb-4">
+                            <h3 class="text-3xl">St Helena, Napa Valley</h3>
+                            <span class="bg-purple-700 px-4 py-1 rounded-full text-xs font-bold">WINE COUNTRY</span>
+                        </div>
+                        <p class="text-slate-300 mb-6 leading-relaxed">
+                            Wine Passport in hand. Four vineyards, one afternoon.
+                            The kind of day that was never in the original plan and ended up being everyone's favourite.
+                        </p>
+                        <div class="flex gap-3 flex-wrap mb-2">
+                            <span class="text-sm border border-[#3a5e42] text-slate-300 px-3 py-1 rounded-md">Wine Passport</span>
+                            <span class="text-sm border border-[#3a5e42] text-slate-300 px-3 py-1 rounded-md">4 Vineyards</span>
+                            <span class="text-sm border border-[#3a5e42] text-slate-300 px-3 py-1 rounded-md">$95 / person</span>
+                        </div>
+                        <div id="stHelenaSuggestions" class="mt-4 space-y-2 text-sm text-purple-300"></div>
+                    </div>
+                </div>
 
-        <p class="text-slate-400 mb-6">
-            Alpine water, granite shoreline, and slower energy. Optional extension north if we want one more dramatic landscape before finishing in LA.
-        </p>
-
-        <div class="flex gap-4">
-            <span class="text-sm border border-slate-600 px-3 py-1 rounded-md">
-                Lake Views
-            </span>
-            <span class="text-sm border border-slate-600 px-3 py-1 rounded-md">
-                Forest Trails
-            </span>
-        </div>
-
-        <div id="tahoeSuggestions" class="mt-6 space-y-4"></div>
-    </div>
-</div>
             </div>
         </div>
+
         <div class="mt-16 text-center">
-            <a href="#route-strategy" class="inline-block bg-slate-900 text-white px-8 py-4 rounded-full font-bold hover:bg-slate-800 transition">
-                Back to Route Strategy ↑
+            <a href="#the-route" class="inline-block border border-slate-600 text-slate-400 px-8 py-4 rounded-full font-bold hover:border-orange-500 hover:text-orange-400 transition">
+                ↑ Back to Route
             </a>
         </div>
     </section>
 
-    <!-- Budget Comparison Section -->
+
+    <!-- ═══════════════════════════════════════════════════════
+         WHAT WE SPENT
+    ═══════════════════════════════════════════════════════ -->
     <section id="budget" class="max-w-7xl mx-auto py-16 md:py-24 px-4 md:px-6">
         <div class="text-center mb-16">
-            <span class="uppercase tracking-widest text-orange-500 font-bold text-sm">The Ultimate Decision</span>
-            <h1 class="text-5xl md:text-6xl mt-2 italic">Choose Your Adventure</h1>
-            <p class="text-slate-500 mt-4 max-w-2xl mx-auto italic">Comparing Kartik's Original, the Optimized Loop, and the new LA Loop-Out.</p>
+            <span class="uppercase tracking-widest text-orange-500 font-bold text-sm">The Numbers</span>
+            <h2 class="text-5xl md:text-6xl mt-2 italic">What We Spent</h2>
+            <p class="text-slate-500 mt-4 max-w-xl mx-auto italic">The known figures — flights and food still being tallied.</p>
         </div>
 
-        <!-- Dynamic Budget Cards -->
-        <div id="budgetCardsContainer" class="grid lg:grid-cols-3 gap-6"></div>
+        <div id="spendCardsContainer" class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6"></div>
 
-        <!-- Dynamic Comparison Table -->
-        <div class="mt-12 overflow-x-auto">
-            <table class="w-full text-left bg-white rounded-3xl overflow-hidden shadow-sm border border-slate-100">
-                <thead id="budgetTableHead" class="bg-slate-50 border-b border-slate-100 text-[10px] uppercase tracking-widest font-bold text-slate-500"></thead>
-                <tbody id="budgetTableBody" class="text-sm"></tbody>
-            </table>
-        </div>
-        
         <div class="mt-8 text-center text-slate-400 text-xs">
-            <p>* Costs are estimates per person based on current Chicago-California averages. Rental car rates assume one driver under 25 may incur fees.</p>
+            <p>Rental car was split across 4 people. Park pass covers Yosemite for a week.</p>
         </div>
     </section>
 
-    <!-- LA Food Section -->
-    <section id="la-spots" class="py-16 md:py-24 px-4 md:px-6 bg-orange-50">
-        <div class="max-w-7xl mx-auto px-6">
+
+    <!-- ═══════════════════════════════════════════════════════
+         FOOD
+    ═══════════════════════════════════════════════════════ -->
+    <section id="food" class="py-16 md:py-24 px-4 md:px-6 bg-[#f5ede0]">
+        <div class="max-w-7xl mx-auto">
             <div class="text-center mb-16">
-                <span class="uppercase tracking-widest text-orange-600 font-bold text-sm">LA Reward Sequence</span>
-                <h2 class="text-6xl mt-2">Restaurants I’m Excited For You To Try</h2>
+                <span class="uppercase tracking-widest text-orange-600 font-bold text-sm">Along the Way</span>
+                <h2 class="text-6xl mt-2">What We Ate</h2>
                 <p class="text-slate-600 mt-4 max-w-2xl mx-auto">
-                    After coastal drives and granite climbs, this is the victory lap. Strategic refueling only.
+                    From roadside fruit markets to calzone after a hike. Fill in trip_recap.txt to add your spots here.
                 </p>
             </div>
 
-            <div id="laSpotsContainer" class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Restaurant cards will be rendered here from tripData.json -->
+            <div id="foodSpotsContainer" class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Populated from tripData.json laSpots, or shows placeholder -->
             </div>
         </div>
     </section>
 
-    <!-- Memories Carousel -->
+
+    <!-- ═══════════════════════════════════════════════════════
+         MEMORIES
+    ═══════════════════════════════════════════════════════ -->
     <section id="memories" class="py-16 md:py-24 px-4 md:px-6 bg-white">
-        <div class="max-w-7xl mx-auto px-6">
+        <div class="max-w-7xl mx-auto">
             <div class="text-center mb-16">
                 <span class="uppercase tracking-widest text-orange-500 font-bold text-sm">Archive</span>
                 <h2 class="text-6xl mt-2">Memories</h2>
-                <p class="text-slate-500 mt-4">AND WHEN I'M BACK IN CHICAGO, I FEEL IT, ANOTHER VERSION OF ME, I WAS IN IT</p>
+                <p class="text-slate-500 mt-4 max-w-2xl mx-auto">
+                    AND WHEN I'M BACK IN CHICAGO, I FEEL IT, ANOTHER VERSION OF ME, I WAS IN IT
+                </p>
             </div>
 
             <div class="relative rounded-3xl shadow-2xl border border-slate-200 overflow-hidden">
                 <div id="carousel" class="flex gap-6 overflow-x-auto scroll-smooth cursor-grab active:cursor-grabbing select-none">
-                    <!-- Images will be injected automatically from /Memories folder -->
+                    <!-- Images injected from memories.json -->
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Footer / CTA -->
-    <footer class="bg-slate-900 text-white py-24 px-6 text-center">
-        <p class="mt-24 opacity-30 text-sm">© 2026 Pranav R. No Boring Days Allowed.</p>
+
+    <!-- ═══════════════════════════════════════════════════════
+         FOOTER
+    ═══════════════════════════════════════════════════════ -->
+    <footer class="bg-[#1a2f1e] text-white py-16 px-6 text-center">
+        <p class="text-slate-400 text-sm tracking-widest uppercase">
+            Pranav · Kartik · Angel · Estephany
+        </p>
+        <p class="mt-3 text-slate-500 text-sm italic">March 2026 · California</p>
+        <p class="mt-12 opacity-20 text-xs">© 2026 Pranav R. No Boring Days Allowed.</p>
     </footer>
 
     <script src="Scripts/carousel.js" defer></script>

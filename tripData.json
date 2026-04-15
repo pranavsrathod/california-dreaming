@@ -1,144 +1,55 @@
 {
-  "routes": {
-    "kartik": {
-      "name": "Kartik's Full Send",
-      "embed": "https://www.google.com/maps/embed?pb=LONG_STRING_1",
-      "description": "LAX → USC → Big Sur → Carmel → Tahoe → Yosemite → Back to LA"
-    },
-    "optimized": {
-      "name": "Optimized Oakland Loop",
-      "embed": "https://www.google.com/maps/embed?pb=LONG_STRING_2",
-      "description": "OAK → Yosemite → Carmel → Big Sur → LA Finish"
-    }
-  },
-  "laSpots": [
-    {
-      "name": "Pine & Crane DTLA",
-      "map": "https://maps.app.goo.gl/rUaGVUy7k2wThhea8",
-      "mustTry": "Dan Dan Noodles",
-      "notes": "Great breakfast menu",
-      "category": "Taiwanese",
-      "priority": 1
-    },
-    {
-      "name": "BCD Tofu House",
-      "map": "https://maps.app.goo.gl/ubymEBp9i8HbKeDK6",
-      "mustTry": "Pork Bulgogi",
-      "notes": "Amazing value for money",
-      "category": "Korean",
-      "priority": 2
-    },
-    {
-      "name": "Biriyani Kabob House",
-      "map": "https://maps.app.goo.gl/yyKVRwcBpGARgotS6",
-      "mustTry": "Hariyali Chicken",
-      "notes": "Dhaba style food, finger licking good",
-      "category": "Indian",
-      "priority": 2
-    },
-    {
-      "name": "Jitlada Thai",
-      "map": "https://maps.app.goo.gl/p5VvVHMkpdvC5Z3g6",
-      "mustTry": null,
-      "notes": "Have never been — high priority visit",
-      "category": "Thai",
-      "priority": 1
-    },
-    {
-      "name": "Porto's Bakery and Cafe",
-      "map": "https://maps.app.goo.gl/96RPi3WwUYMpyZkL6",
-      "mustTry": "Refugiado (Guava and Cheese Strudel), Potato Ball",
-      "notes": "Great pastries + drinks.",
-      "category": "Cuban-American",
-      "priority": 2
-    }
-  ],
+  "laSpots": [],
   "tripExperiences": [
     {
-      "name": "Mist Trail",
-      "location": "Yosemite National Park",
-      "type": "Hike",
-      "intensity": "High",
-      "mustDo": true,
-      "notes": "Iconic waterfall climb. Expect to get soaked."
-    },
-    {
-      "name": "17-Mile Drive",
-      "location": "Pebble Beach",
-      "type": "Scenic Drive",
+      "name": "Sand Dollar Beach",
+      "location": "Big Sur",
+      "type": "Beach",
       "intensity": "Low",
-      "mustDo": false,
-      "notes": "Cliffside views + Lone Cypress stop."
+      "mustDo": true,
+      "notes": "Sweeping black sand beach on the southern Big Sur coast. First real stop on the drive north."
     },
     {
-      "name": "Big Sur Coastal Stops",
-      "location": "Highway 1",
+      "name": "McWay Falls",
+      "location": "Big Sur",
+      "type": "Waterfall",
+      "intensity": "Low",
+      "mustDo": true,
+      "map": "https://maps.app.goo.gl/3Mkc7QgxFwLe1UVe8",
+      "notes": "80-foot waterfall dropping straight onto the beach. Short walk, massive payoff."
+    },
+    {
+      "name": "Bixby Bridge Viewpoint",
+      "location": "Big Sur",
       "type": "Scenic",
       "intensity": "Low",
       "mustDo": true,
-      "notes": "Bixby Bridge + McWay Falls photo moments."
+      "map": "https://maps.app.goo.gl/dMJZiERyv8EN6aEP9",
+      "notes": "The iconic arched bridge over the canyon. Stop on both sides."
     },
     {
-      "name": "LA Victory Lap",
-      "location": "Los Angeles",
-      "type": "City",
-      "intensity": "Recovery",
-      "mustDo": true,
-      "notes": "End the trip relaxed, not rushed."
-    },
-    {
-      "name": "Henry Miller Memorial Library",
+      "name": "Point Lobos",
       "location": "Big Sur",
-      "type": "Cultural",
-      "intensity": "Low",
-      "mustDo": false,
-      "map": "https://maps.app.goo.gl/eJ98Xm7758DixdNz7",
-      "notes": "Iconic literary stop tucked into the redwoods."
-    },
-    {
-      "name": "Big Sur River Gorge",
-      "location": "Big Sur",
-      "type": "Nature",
-      "intensity": "Medium",
-      "mustDo": false,
-      "map": "https://maps.app.goo.gl/3L3MzPsuvyjZfU9w8",
-      "notes": "Emerald swimming holes along the river."
-    },
-    {
-      "name": "Point Lobos – Sea Lion Point",
-      "location": "Carmel-by-the-Sea",
       "type": "Hike",
       "intensity": "Medium",
       "mustDo": true,
-      "map": "https://www.tiktok.com/@josylopezz/video/7600262366911073567",
-      "notes": "Coastal trail with sea lion views and dramatic cliffs."
+      "notes": "Coastal bluffs with sea views. Overlaps with Carmel territory — worth the slight detour."
     },
     {
-      "name": "Carmel Mission Basilica",
-      "location": "Carmel-by-the-Sea",
-      "type": "Historical",
-      "intensity": "Low",
-      "mustDo": false,
-      "map": "https://maps.app.goo.gl/xURzSh1JJDGziySm9",
-      "notes": "Historic Spanish mission with beautiful grounds."
-    },
-    {
-      "name": "Carmel Walks",
-      "location": "Carmel-by-the-Sea",
-      "type": "Town Exploration",
+      "name": "Garrapata State Beach & Lily Valley",
+      "location": "Big Sur",
+      "type": "Scenic",
       "intensity": "Low",
       "mustDo": true,
-      "map": "https://maps.app.goo.gl/GMCmg4n2tqbeirj26",
-      "notes": "Storybook streets, art galleries, and coastal charm."
+      "notes": "Sunset here. Wedding photoshoot in progress, dog climbing rocks, everyone quiet. One of those moments."
     },
     {
-      "name": "Hansel & Gretel Cottages",
-      "location": "Carmel-by-the-Sea",
-      "type": "Architecture",
+      "name": "Casa De Fruta",
+      "location": "Yosemite National Park",
+      "type": "Road Stop",
       "intensity": "Low",
       "mustDo": false,
-      "map": "https://maps.app.goo.gl/H9AZzi5K6mtiVXJm9",
-      "notes": "Whimsical fairytale-style homes in Carmel."
+      "notes": "Roadside market on the way in. Fresh fruit, dried goods, wine, a carousel, and a train ride. Surprisingly fun stop."
     },
     {
       "name": "Tunnel View",
@@ -147,7 +58,7 @@
       "intensity": "Low",
       "mustDo": true,
       "map": "https://maps.app.goo.gl/17cXgcPgvcWfNW686",
-      "notes": "Classic Yosemite panorama overlooking El Capitan and Half Dome."
+      "notes": "El Capitan and Half Dome framed by the tunnel entrance. Hit it at golden hour on the sunset drive back."
     },
     {
       "name": "Bridalveil Fall",
@@ -156,52 +67,32 @@
       "intensity": "Low",
       "mustDo": false,
       "map": "https://maps.app.goo.gl/jpUAK6g1wCSWSf3W9",
-      "notes": "Short walk to one of Yosemite’s most photogenic falls."
+      "notes": "Quick walk to one of Yosemite's most photogenic falls."
     },
     {
-      "name": "Lower Yosemite Falls Trailhead",
+      "name": "El Capitan Meadow",
       "location": "Yosemite National Park",
-      "type": "Hike",
-      "intensity": "Low",
-      "mustDo": false,
-      "map": "https://maps.app.goo.gl/egNDAgpLjvMLgVY56",
-      "notes": "Easy loop to the base of Yosemite Falls."
-    },
-    {
-      "name": "Mariposa Town",
-      "location": "Mariposa",
-      "type": "Town Stop",
-      "intensity": "Low",
-      "mustDo": false,
-      "map": "https://maps.app.goo.gl/N14ELmWCT2efvM429",
-      "notes": "Gold rush town near Yosemite, good for food and lodging."
-    },
-    {
-      "name": "South Lake Tahoe",
-      "location": "Lake Tahoe",
-      "type": "Town",
-      "intensity": "Low",
-      "mustDo": true,
-      "map": "https://maps.app.goo.gl/feMdxooHz5sVwxeAA",
-      "notes": "Main hub on the south shore. Basecamp energy, lake access, and food options."
-    },
-    {
-      "name": "Emerald Bay State Park",
-      "location": "Lake Tahoe",
       "type": "Scenic",
-      "intensity": "Medium",
-      "mustDo": false,
-      "map": "https://maps.app.goo.gl/RfZx5pPZPdjdg4NK8",
-      "notes": "Iconic turquoise bay with hiking trails and panoramic lake views."
+      "intensity": "Low",
+      "mustDo": true,
+      "notes": "Standing in the meadow staring straight up at 3,000 feet of granite. Nothing prepares you for how big it actually is."
     },
     {
-      "name": "Ed Z'berg Sugar Pine Point State Park",
-      "location": "Lake Tahoe",
-      "type": "Nature",
-      "intensity": "Medium",
+      "name": "Mist Trail to Vernal Falls",
+      "location": "Yosemite National Park - Hike",
+      "type": "Hike",
+      "intensity": "High",
       "mustDo": true,
-      "map": "https://maps.app.goo.gl/jxiWseJ9FCYkHTGc7",
-      "notes": "Quiet lakeside park with forest trails and classic Tahoe shoreline."
+      "map": "https://maps.app.goo.gl/crVpjhTiUY4EF7gN6",
+      "notes": "Made it to Vernal Falls. Loop trail was closed — had to backtrack the same steep path down. Still completely worth it."
+    },
+    {
+      "name": "St Helena Wine Passport",
+      "location": "St Helena, Napa Valley",
+      "type": "Wine Tour",
+      "intensity": "Low",
+      "mustDo": true,
+      "notes": "$95/person. Four vineyards in one afternoon. The kind of day that sneaks up on you."
     }
   ]
 }

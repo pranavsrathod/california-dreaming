@@ -1,0 +1,247 @@
+================================================================================
+  TRIP RECAP — Fill this in and we'll update the website together
+================================================================================
+Instructions: Replace anything in [brackets] with the real detail.
+Leave a field blank or write "skip" if you don't want it on the site.
+The more detail you add, the better the site will look.
+================================================================================
+
+
+────────────────────────────────────────────────────────────────────────────────
+  1. OVERVIEW
+────────────────────────────────────────────────────────────────────────────────
+
+Trip Title (e.g. "The Golden Loop", "Big Sur or Bust"):
+  [TITLE]
+
+One-line tagline (shown under the title on the hero):
+  [TAGLINE — e.g. "Five days. Two coasts. Zero regrets."]
+
+Dates:
+  Departure: March 20, 2026
+  Return:    March 24, 2026
+
+Who went:
+  Pranav, Kartik, Angel, Estephany
+
+
+────────────────────────────────────────────────────────────────────────────────
+  2. THE ROUTE (what actually happened)
+────────────────────────────────────────────────────────────────────────────────
+
+
+Actual route in order (list each stop):
+  1. [e.g. Los Angeles — stayed at USC, 1 night]
+  2. [e.g. Big Sur — drove Highway 1, stayed at ...]
+  3. [...]
+  4. [...]
+  5. [...]
+
+Total miles driven (approx):  1648.3 Miles
+
+Anything that changed from the original plan:
+  Skipped Lake Tahoe entirely.
+  Did not really explore Carmel By the sea
+
+
+
+────────────────────────────────────────────────────────────────────────────────
+  3. STOPS — what you did at each place
+     (Add or remove stop blocks as needed)
+────────────────────────────────────────────────────────────────────────────────
+
+--- STOP 1 ---
+Location:    Big Sur
+Days spent:  1
+Region tag:  [e.g. COAST REGION]
+Cover image: 
+
+What you did:
+  Drove up Highway 1 north to Monterey
+  Sand Dollar Beach
+  McWay falls
+  Bixby Bridge Viewpoint
+  Point Lobos
+  Sunset at Garrapata State Beach and Lily Valley
+
+Best moment / quote for the site:
+  Took waymo to the rental car place and it dropped us off 15 mins away from the spot, we walked 15 mins only to see that they moved to another location
+  Rental Car Upgraded us to a 2026 Lincoln Nautilus SUV for Kartik's Bday
+  Wedding Photoshoot at Lily Valley, Dog on the beach trying to climb up on the rocks
+
+
+Highlight tags (short labels shown on the card):
+  Not taking the waymo to the airport
+  
+
+
+--- STOP 2 ---
+Location:    Carmel-by-the-Sea + Yosemeti
+Days spent:  
+Region tag:  
+Cover image: 
+
+What you did:
+  Stopped by Downtown Carmel Early in the morning only to have horrible coffee
+  drove to mariposa 
+  stopped by Casa De Fruta : 
+      People say this market offers a wide variety of fresh fruits, nuts, dried fruits, candies, and wines, as well as a restaurant serving hearty meals. They highlight the fun, family-friendly atmosphere with attractions like a train ride, carousel, and playground, and the clean restrooms and ample parking. They also like the friendly and attentive staff.
+  Drove to Yosemeti National Park
+    Tunnel View
+    Bridalveil Fall
+    El Capitan Meadow
+    Drove by Merced River
+
+
+Best moment / quote for the site:
+  Sunset drive back plus tunnel view reveal
+
+Highlight tags:
+  
+
+
+--- STOP 3 ---
+Location:    Yosemite - hike day
+Days spent:  
+Region tag:  
+Cover image: 
+
+What you did:
+  - Hike Mist Train to Vernail Falls
+  - Calzone Pockets for dinner
+
+
+Best moment / quote for the site:
+  Got to the top of the hike only to find out the loop trail was closed and had to backtrack
+
+Highlight tags:
+  "Mist Trail" 
+
+
+--- STOP 4 ---  (add more blocks like this if needed)
+Location:    St Helena Wine tour
+Days spent:  1
+Region tag:  
+Cover image:
+
+What you did:
+  Drove to St Helena
+  Picked up St Helena Wine passport
+  visisted 4 Vineards to get tastings
+
+Best moment / quote for the site:
+  
+
+Highlight tags:
+  [...]
+
+
+────────────────────────────────────────────────────────────────────────────────
+  4. FOOD & RESTAURANTS
+     (What you actually ate — replace or remove items from the plan)
+────────────────────────────────────────────────────────────────────────────────
+
+Format per restaurant:
+  Name:       [Restaurant name]
+  Location:   [City]
+  Ordered:    [What you got]
+  Verdict:    [One honest line — e.g. "Dan Dan noodles were unreal, go for breakfast"]
+  Rating:     [/10 or skip]
+  Maps link:  [paste Google Maps link or leave blank]
+  Must try:   [Dish to order]
+
+---
+Name:       [...]
+Location:   [...]
+Ordered:    [...]
+Verdict:    [...]
+Rating:     [...]
+Maps link:  [...]
+Must try:   [...]
+
+---
+Name:       [...]
+Location:   [...]
+Ordered:    [...]
+Verdict:    [...]
+Rating:     [...]
+Maps link:  [...]
+Must try:   [...]
+
+---
+Name:       [...]
+Location:   [...]
+Ordered:    [...]
+Verdict:    [...]
+Rating:     [...]
+Maps link:  [...]
+Must try:   [...]
+
+---
+(Add more blocks as needed)
+
+
+────────────────────────────────────────────────────────────────────────────────
+  5. BUDGET — what you actually spent
+     (Used for the budget section on the site)
+────────────────────────────────────────────────────────────────────────────────
+
+Flights (total, per person):   $[...]
+Car rental:                     $ 364 for the 5 days
+Gas:                            $ Calculate based on car milage and avg gas prices
+Accommodation:                  $ 150 per person i want to say
+Food & drinks:                  $[...]
+Park fees / activities:
+    - Wine Passport             $ 95 Per person
+    - Park Pass                 $ 35 for the week
+Other:                          $[...]
+─────────────────────────────
+TOTAL (per person):             $[...]
+
+Anything worth calling out (e.g. "Yosemite permit was $35 extra"):
+  [...]
+
+
+────────────────────────────────────────────────────────────────────────────────
+  6. HIGHLIGHTS & MOMENTS
+     (Used for callout quotes and the memories section)
+────────────────────────────────────────────────────────────────────────────────
+
+Top 3 moments of the trip:
+  1. [...]
+  2. [...]
+  3. [...]
+
+Anything that was a pleasant surprise:
+  [...]
+
+Anything that didn't live up to the hype:
+  [...]
+
+One sentence that sums up the whole trip:
+  [...]
+
+Quote / caption for the memories section:
+  [Currently: "AND WHEN I'M BACK IN CHICAGO, I FEEL IT, ANOTHER VERSION OF ME, I WAS IN IT"]
+  [Keep or replace: ...]
+
+
+────────────────────────────────────────────────────────────────────────────────
+  7. DESIGN PREFERENCES (optional — for the visual refresh)
+────────────────────────────────────────────────────────────────────────────────
+
+Vibe / mood you want the site to feel like:
+  warm and nostalgic and beachy
+Color palette preference:
+  green and orange
+Sections to remove entirely:
+  drop the budget comparison table"
+
+Sections to add:
+  
+Anything else:
+  [...]
+
+================================================================================
+  Done? Save this file and let me know — I'll rebuild the site section by section.
+================================================================================
